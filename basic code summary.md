@@ -1,6 +1,4 @@
-# good luck and pass with excellent grades samu 🎉🎉
-
-frequent use stuff
+# frequent use basic code
 ```python
 itertools collections heapq math numpy
 if..elif..else for...in while 
@@ -54,7 +52,8 @@ res = filter(lambda x: x > 0, a) #filter out positive
 numpy.transpose() numpy.array() numpy.T()
 for index, char in enumerate(iterable) #return unique index with element (can get element without repeat not only the first would found)
 ```
-binary search
+# algorithm and data structures
+### binary search
 ```python
 def binary_search(arr, target):
     left, right = 0, len(arr) - 1
@@ -68,7 +67,7 @@ def binary_search(arr, target):
 			right = mid - 1
 		return -1
 ```
-two pointer
+### two pointer
 ```python
 l=0 
 r=n-1
@@ -82,7 +81,7 @@ while l < r:
 else:
 r -= 1
 ```
-recursion
+### recursion
 ```python
 importsys
 sys.setrecursionlimit(1 << 30)
@@ -96,7 +95,7 @@ def recursive(n):
     else:
         return recursive(n - 1) + recursive(n - 2)
 ```
-dfs
+### dfs
 ```python
 def dfs(x, y):
 	field[x][y] = '.'
@@ -234,7 +233,7 @@ for i in range(r):
         max_len = max(max_len, dp[i][j])
 print(max_len)
 ```
-bfs
+### bfs
 ```python
 from collections import deque
 def bfs(s, e):
@@ -350,7 +349,7 @@ for i in range(1,n+1):
             counter += 1
 print(counter)
 ```
-dp
+### dp
 双dp(土豪购物)——两种情况分析，取或不取，放或不放
 ```python
 def max_value(s):
@@ -391,7 +390,7 @@ for i in range(1, n+1):
 	        dp[i] = max(dp[i-j] + 1, dp[i])
 print(dp[n])
 ```
-others
+# others
 ```python
 #spiraling
 n = int(input())
@@ -596,5 +595,3 @@ if IsPerfectNumberFilterMethod(numer):
 else:
     print("no")
 ```
-# good luck and pass with excellent grades samu 🎉🎉
-# you did great, i'm proud of you no matter what 🥰🥰
