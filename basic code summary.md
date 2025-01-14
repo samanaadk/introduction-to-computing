@@ -1,4 +1,5 @@
-# frequent use basic code
+# basic code summary (computer test cheat sheet)
+## frequent use basic code
 ```python
 itertools collections heapq math numpy
 if..elif..else for...in while 
@@ -52,7 +53,7 @@ res = filter(lambda x: x > 0, a) #filter out positive
 numpy.transpose() numpy.array() numpy.T()
 for index, char in enumerate(iterable) #return unique index with element (can get element without repeat not only the first would found)
 ```
-# algorithm and data structures
+## algorithm and data structures
 ### binary search
 ```python
 def binary_search(arr, target):
@@ -390,7 +391,7 @@ for i in range(1, n+1):
 	        dp[i] = max(dp[i-j] + 1, dp[i])
 print(dp[n])
 ```
-# others
+## others
 ```python
 #spiraling
 n = int(input())
