@@ -1,8 +1,8 @@
-
-basics
+# written exam notes & summary
+### basics
 - The combination of hardware and software forms a usable computing system. Hardware is usually instructed by software to execute any commands or instructions. Computer hardware includes the physical, tangible parts or components of a computer, such as the main board, central processing unit (CPU), display, keyboard, and mouse. Computer software includes system software and application software. System software is responsible for managing the various independent hardware in the computer system so that they can work in coordination. Common operating systems in system software include Linux, macOS, Unix, Windows, etc. Application software is software developed for a specific purpose. Common application software includes word processing, programming, web browsers, input methods, and media players, etc.
 
-ascii
+### ascii
 - A bit is the smallest unit of data stored in a computer. It is either 0 or 1. A bit represents a certain state of a device. For example, 1 represents a switch that is closed and 0 represents a switch that is open. To represent different types of data, a bit pattern is used (sequence of 0s and 1s)
 - 8 bit = 1 Byte
     - KB= 2^10 Byte
@@ -19,7 +19,7 @@ ascii
     - + (20)_16
 - 127: delete
 
-virtual memory
+### virtual memory
 - Virtual memory is a memory management technique used in computers to extend the apparent amount of physical memory available by using disk space as an extension of RAM.
 - Key Concepts of Virtual Memory:
     1. Address Space Virtualization:
@@ -57,7 +57,7 @@ virtual memory
 - Modern Uses:
     - Virtual memory is widely used in modern operating systems, such as Windows, Linux, and macOS, to efficiently manage resources and enable multitasking on computers with limited physical RAM.
 
-turing machine
+### turing machine
 - A tape: infinitely long in both directions, with squares (fields) on it, each of which can contain a character from a finite alphabet. In a real machine, the tape must be large enough to contain all the data for the algorithm.
 - A controller: contains a read-write head (head) that can move in both directions, which can read and write a character in the given field; the Turing machine is in a certain state (current state) at all times, which is one of a finite number of states; it can accept a set Turing program (program), which is a list of transitions that determines a new state for a given state and the character under the head, a character that must be written to the field under the head, and the direction of the head's movement, that is, left, right, or stationary.
 - Components of a Turing Machine:
@@ -92,14 +92,14 @@ turing machine
     3. Halting:
         - The machine stops when it enters a halting state or when no transition is defined for the current state and symbol.
 
-binary
+### binary
 - 8 bit = 2^0 … 2^7
 - base 10 → base n: divide by n, use reminder from bottom to top
     - decimal: times by n, use integer from top to bottom
 - base n → base 10: times bit by the digit and add all together
 - base x → base y: base x → base 10 → base y
 
-storage
+### storage
 - bit & byte
 - complement for negative
     - 1’s complement (求反)→ switch 1s and 0s
@@ -110,7 +110,7 @@ storage
         - symbol (符号) + significant digit (定点数) + power to the base (位移量)
     - stored in computer: symbol (符号) + power (指数)+ significant digit not including the whole number (尾数)
 
-computer
+### computer
 - Major Computer Subsystems:
     - CPU: Performs operations on data, consisting of:
         - Arithmetic Logic Unit (ALU; 算术逻辑单元): Handles arithmetic, shift, and logic operations.
@@ -155,7 +155,7 @@ computer
     - Evolved architecture and organization.
     - Increased use of synchronization and optimization techniques.
 
-logical operations
+### logical operations
 - not (~)
     - 0 → 1
     - 1 → 0
@@ -175,14 +175,14 @@ logical operations
     - 1 xor 0 → 1
     - 1 xor 1 → 0
 
-shift operations
+### shift operations
 - logical left/right → just shift and add 0 at right end (the leftmost disappears)
 - circular left/right → leftmost comes to the right end
 - arithmetic shift → Arithmetic shift operations assume that the bit pattern is a signed integer represented in two's complement format. Arithmetic right shift is used to divide integers by 2; and arithmetic left shift is used to multiply integers by 2. These operations should not change the sign bit (leftmost). Arithmetic right shift preserves the sign bit, but also copies it to the adjacent right bit, so the sign is preserved. Arithmetic left shift discards the sign bit and accepts the bit to its right as the sign bit. If the new sign bit is the same as the old one, the operation succeeds, otherwise overflow or underflow occurs and the result is illegal.
 
-network
+### network
 - 网络协议是指在计算机网络中，为了实现不同设备之间的通信而定义的一系列规则和约定。网络协议通常按照OSI（开放系统互联）参考模型或者TCP/IP模型的各个层次进行划分。以下是网络中各层常见的协议：
-1. **物理层（Physical Layer）**
+1. 物理层（Physical Layer）
     - 物理层负责通过物理媒介传输原始的比特流。它的主要任务是定义电气信号、传输介质等。
     - 协议：物理层通常没有具体的“协议”定义，但涉及的标准有：
         - Ethernet (以太网)
@@ -190,131 +190,122 @@ network
         - 光纤传输协议（如Fiber Channel）
         - USB
         - Wi-Fi（也涉及到数据链路层，但物理层部分是无线通信标准）
-2. **数据链路层（Data Link Layer）**
+2. 数据链路层（Data Link Layer）
     - 数据链路层负责在物理链路上进行数据帧的传输与接收，保证数据的可靠性。
     - 协议：
-        - **Ethernet（以太网）**：用于局域网中的数据传输。
-        - **PPP（Point-to-Point Protocol，点对点协议）**：用于点对点链路，常用于拨号上网。
-        - **Wi-Fi（无线局域网）**：用于无线通信。
-        - **Frame Relay**：一种用于连接多个局域网的协议，较早期常见。
-        - **HDLC（High-Level Data Link Control）**：一种面向比特的协议，用于帧的交换。
-3. **网络层（Network Layer）**
+        - Ethernet（以太网）：用于局域网中的数据传输。
+        - PPP（Point-to-Point Protocol，点对点协议）：用于点对点链路，常用于拨号上网。
+        - Wi-Fi（无线局域网）：用于无线通信。
+        - Frame Relay：一种用于连接多个局域网的协议，较早期常见。
+        - HDLC（High-Level Data Link Control）：一种面向比特的协议，用于帧的交换。
+3. 网络层（Network Layer）
     - 网络层负责数据包从源主机到目的主机的传输，主要处理路由、寻址等问题。
     - 协议：
-        - **IP（Internet Protocol，互联网协议）**：主要用于在不同网络之间传输数据包，常见的版本有IPv4和IPv6。
-        - **ICMP（Internet Control Message Protocol，互联网控制报文协议）**：用于发送控制消息，如ping命令。
-        - **ARP（Address Resolution Protocol，地址解析协议）**：将IP地址解析为MAC地址。
-        - **RARP（Reverse ARP）**：将MAC地址解析为IP地址（较少使用）。
-        - **OSPF（Open Shortest Path First）**：一种动态路由协议，常用于大型网络中的路由选择。
-        - **BGP（Border Gateway Protocol）**：用于互联网中的路由选择，支持跨自治系统的路由。
-4. **传输层（Transport Layer）**
+        - IP（Internet Protocol，互联网协议）：主要用于在不同网络之间传输数据包，常见的版本有IPv4和IPv6。
+        - ICMP（Internet Control Message Protocol，互联网控制报文协议）：用于发送控制消息，如ping命令。
+        - ARP（Address Resolution Protocol，地址解析协议）：将IP地址解析为MAC地址。
+        - RARP（Reverse ARP）：将MAC地址解析为IP地址（较少使用）。
+        - OSPF（Open Shortest Path First）：一种动态路由协议，常用于大型网络中的路由选择。
+        - BGP（Border Gateway Protocol）：用于互联网中的路由选择，支持跨自治系统的路由。
+4. 传输层（Transport Layer）
     - 传输层负责端到端的数据传输，确保数据的可靠性和顺序。
     - 协议：
-        - **TCP（Transmission Control Protocol，传输控制协议）**：面向连接、可靠的传输协议，确保数据的顺序性和完整性。
-        - **UDP（User Datagram Protocol，用户数据报协议）**：无连接、低延迟的传输协议，不保证可靠性。
-        - **SCTP（Stream Control Transmission Protocol）**：面向消息的协议，结合了TCP和UDP的一些特点。
-5. **会话层（Session Layer）**
+        - TCP（Transmission Control Protocol，传输控制协议）：面向连接、可靠的传输协议，确保数据的顺序性和完整性。
+        - UDP（User Datagram Protocol，用户数据报协议）：无连接、低延迟的传输协议，不保证可靠性。
+        - SCTP（Stream Control Transmission Protocol）：面向消息的协议，结合了TCP和UDP的一些特点。
+5. 会话层（Session Layer）
     - 会话层负责建立、管理和终止会话。它确保不同计算机间的通信保持正确的顺序。
     - 协议：
-        - **NetBIOS**：提供网络会话管理服务。
-        - **RPC（Remote Procedure Call，远程过程调用）**：允许不同主机上的程序进行通信。
-        - **SMB（Server Message Block）**：用于共享文件和打印机资源。
-        - **TLS/SSL（Transport Layer Security / Secure Sockets Layer）**：用于在会话层加密数据传输。
-6. **表示层（Presentation Layer）**
+        - NetBIOS：提供网络会话管理服务。
+        - RPC（Remote Procedure Call，远程过程调用）：允许不同主机上的程序进行通信。
+        - SMB（Server Message Block）：用于共享文件和打印机资源。
+        - TLS/SSL（Transport Layer Security / Secure Sockets Layer）：用于在会话层加密数据传输。
+6. 表示层（Presentation Layer）
     - 表示层负责数据的格式化、加密和压缩，以便于应用层能够正确理解数据。
     - 协议：
-        - **JPEG**、**GIF**、**PNG**：常见的图像文件格式。
-        - **MPEG**、**MP3**：常见的音频和视频压缩格式。
-        - **ASCII**、**EBCDIC**：字符编码格式。
-        - **TLS/SSL**：可以在表示层加密数据。
-7. **应用层（Application Layer）**
+        - JPEG、GIF、PNG：常见的图像文件格式。
+        - MPEG、MP3：常见的音频和视频压缩格式。
+        - ASCII、EBCDIC：字符编码格式。
+        - TLS/SSL：可以在表示层加密数据。
+7. 应用层（Application Layer）
     - 应用层是与用户直接交互的层，负责提供应用程序需要的通信服务。
     - 协议：
-        - **HTTP（Hypertext Transfer Protocol，超文本传输协议）**：用于网页浏览。
-        - **HTTPS（Hypertext Transfer Protocol Secure）**：HTTP的安全版本，使用SSL/TLS进行加密。
-        - **FTP（File Transfer Protocol，文件传输协议）**：用于文件传输。
-        - **SMTP（Simple Mail Transfer Protocol，简单邮件传输协议）**：用于发送电子邮件。
-        - **POP3（Post Office Protocol 3，邮局协议3）**：用于接收电子邮件。
-        - **IMAP（Internet Message Access Protocol，互联网邮件访问协议）**：比POP3更强大的电子邮件接收协议。
-        - **DNS（Domain Name System，域名系统）**：用于将域名解析为IP地址。
-        - **Telnet**：用于远程登录服务器。
-        - **SSH（Secure Shell）**：用于远程登录，具备加密功能。
-        - **DHCP（Dynamic Host Configuration Protocol，动态主机配置协议）**：用于动态分配IP地址。
+        - HTTP（Hypertext Transfer Protocol，超文本传输协议）：用于网页浏览。
+        - HTTPS（Hypertext Transfer Protocol Secure）：HTTP的安全版本，使用SSL/TLS进行加密。
+        - FTP（File Transfer Protocol，文件传输协议）：用于文件传输。
+        - SMTP（Simple Mail Transfer Protocol，简单邮件传输协议）：用于发送电子邮件。
+        - POP3（Post Office Protocol 3，邮局协议3）：用于接收电子邮件。
+        - IMAP（Internet Message Access Protocol，互联网邮件访问协议）：比POP3更强大的电子邮件接收协议。
+        - DNS（Domain Name System，域名系统）：用于将域名解析为IP地址。
+        - Telnet：用于远程登录服务器。
+        - SSH（Secure Shell）：用于远程登录，具备加密功能。
+        - DHCP（Dynamic Host Configuration Protocol，动态主机配置协议）：用于动态分配IP地址。
 - 每一层都有其对应的协议和作用，它们共同合作使得网络通信得以顺畅进行。
 
-**TCP/IP 四层模型**
-1. **链路层 (Link Layer)**
+TCP/IP 四层模型
+1. 链路层 (Link Layer)
     - 协议：与 OSI 数据链路层类似，包括 Ethernet, Wi-Fi 等。
-2. **网络层 (Internet Layer)**
+2. 网络层 (Internet Layer)
     - 协议：IP, ICMP, ARP (地址解析协议), RARP (逆向地址解析协议)
-3. **传输层 (Transport Layer)**
+3. 传输层 (Transport Layer)
     - 协议：TCP, UDP
-4. **应用层 (Application Layer)**
+4. 应用层 (Application Layer)
     - 协议：包含了 OSI 模型中的会话层、表示层和应用层的功能，例如 HTTP, FTP, SMTP, DNS 等。
-- **关键差异**
-    - **OSI 模型** 更加理论化，将网络通信过程细分为七个层次。
-    - **TCP/IP 模型** 是实际应用更广泛的模型，它简化为四个层次，更加注重实用性。
+- 关键差异
+    - OSI 模型 更加理论化，将网络通信过程细分为七个层次。
+    - TCP/IP 模型 是实际应用更广泛的模型，它简化为四个层次，更加注重实用性。
 - 在实践中，大多数网络协议都是基于 TCP/IP 模型设计的，而 OSI 模型更多地用于教学目的和概念上的理解。然而，了解两者可以帮助更好地理解网络通信的工作原理。
 - DNS
     - DNS 污染是指某些网络服务提供商或恶意软件篡改了 DNS 解析结果，将用户引导到错误的 IP 地址。
     - DNS 污染通常发生在以下几种情况下: 1.ISP 篡改:一些互联网服务提供商(ISP)可能会故意篡改 DNS 解析结果，将用户重定向到广告页面或其他网站。 2.恶意软件:某些恶意软件会修改本地的 hosts 文件或系统设置，以达到类似的目的。 3.政府控制:在某些国家和地区，政府可能会实施 DNS 污染来阻止访问特定网站。
-    - **如何解决 DNS 污染** 使用公共 DNS 服务器 你可以尝试使用公共 DNS 服务器，如 Google Public DNS (8.8.8.8和 8.8.4.4)或 Cloudflare DNS (1.1.1.1 和1.0.0.1)，这些服务器通常不会被篡改。 更改 DNS 设置: 可以通过系统偏好设置中的网络设置来更改 DNS 服务器地址。
+    - 如何解决 DNS 污染 使用公共 DNS 服务器 你可以尝试使用公共 DNS 服务器，如 Google Public DNS (8.8.8.8和 8.8.4.4)或 Cloudflare DNS (1.1.1.1 和1.0.0.1)，这些服务器通常不会被篡改。 更改 DNS 设置: 可以通过系统偏好设置中的网络设置来更改 DNS 服务器地址。
     - 修改本地 hosts 文件 如果你确定某个域名被污染，可以手动修改本地的 hosts 文件，将正确的IP 地址与域名绑定。
-- **SSH**
+- SSH
     - SSH（Secure Shell）协议位于OSI七层模型的应用层。它主要用于在不安全的网络中为网络连接提供安全保障，特别是用于远程登录和执行命令。SSH不仅提供了强大的加密机制来保护数据的安全性和完整性，还支持身份验证，以确保通信双方的真实性。
     - 尽管SSH主要用于终端仿真和命令行界面的交互，它同样可以用来传输文件（通过SFTP或SCP）或者隧道其他应用程序。由于它的功能直接服务于应用程序之间的交互，并且是用户可以直接调用的服务，因此被归类到应用层。
     - 在TCP/IP模型中，SSH也是位于应用层。TCP/IP模型不像OSI模型那样严格区分表示层和会话层的功能，而是将这些功能都包含在了应用层中。所以，在这两个网络模型中，SSH都被认为是在应用层工作。
 - type
-1. **A 类网络 (Class A)**
-    - **地址范围**：`1.0.0.0` 到 `126.255.255.255`
-        - **二进制表示**：`00000001.00000000.00000000.00000000` 到 `01111110.11111111.11111111.11111111`
-        - **十六进制表示**：`01.00.00.00` 到 `7E.FF.FF.FF`
-    - **默认子网掩码**：`255.0.0.0` 或 `/8`
-        - **二进制掩码**：`11111111.00000000.00000000.00000000`
-        - **十六进制掩码**：`FF.00.00.00`
-    - **主机部分大小**：A 类地址的主机部分占 **24 位**（32 位减去 8 位的网络部分）。
+1. A 类网络 (Class A)
+    - 地址范围：`1.0.0.0` 到 `126.255.255.255`
+        - 二进制表示：`00000001.00000000.00000000.00000000` 到 `01111110.11111111.11111111.11111111`
+        - 十六进制表示：`01.00.00.00` 到 `7E.FF.FF.FF`
+    - 默认子网掩码：`255.0.0.0` 或 `/8`
+        - 二进制掩码：`11111111.00000000.00000000.00000000`
+        - 十六进制掩码：`FF.00.00.00`
+    - 主机部分大小：A 类地址的主机部分占 24 位（32 位减去 8 位的网络部分）。
         - 可分配的主机地址数：
-            
             ```
             2^24 - 2 = 16,777,214
-            
             ```
-            
-            - 去掉网络地址和广播地址，剩余可分配给主机的地址数为 **16,777,214** 个。
-2. **B 类网络 (Class B)**
-    - **地址范围**：`128.0.0.0` 到 `191.255.255.255`
-        - **二进制表示**：`10000000.00000000.00000000.00000000` 到 `10111111.11111111.11111111.11111111`
-        - **十六进制表示**：`80.00.00.00` 到 `BF.FF.FF.FF`
-    - **默认子网掩码**：`255.255.0.0` 或 `/16`
-        - **二进制掩码**：`11111111.11111111.00000000.00000000`
-        - **十六进制掩码**：`FF.FF.00.00`
-    - **主机部分大小**：B 类地址的主机部分占 **16 位**（32 位减去 16 位的网络部分）。
+            - 去掉网络地址和广播地址，剩余可分配给主机的地址数为 16,777,214 个。
+2. B 类网络 (Class B)
+    - 地址范围：`128.0.0.0` 到 `191.255.255.255`
+        - 二进制表示：`10000000.00000000.00000000.00000000` 到 `10111111.11111111.11111111.11111111`
+        - 十六进制表示：`80.00.00.00` 到 `BF.FF.FF.FF`
+    - 默认子网掩码：`255.255.0.0` 或 `/16`
+        - 二进制掩码：`11111111.11111111.00000000.00000000`
+        - 十六进制掩码：`FF.FF.00.00`
+    - 主机部分大小：B 类地址的主机部分占 16 位（32 位减去 16 位的网络部分）。
         - 可分配的主机地址数：
-            
             ```
             2^16 - 2 = 65,534
-            
             ```
-            
-            - 去掉网络地址和广播地址，剩余可分配给主机的地址数为 **65,534** 个。
-3. **C 类网络 (Class C)**
-    - **地址范围**：`192.0.0.0` 到 `223.255.255.255`
-        - **二进制表示**：`11000000.00000000.00000000.00000000` 到 `11011111.11111111.11111111.11111111`
-        - **十六进制表示**：`C0.00.00.00` 到 `DF.FF.FF.FF`
-    - **默认子网掩码**：`255.255.255.0` 或 `/24`
-        - **二进制掩码**：`11111111.11111111.11111111.00000000`
-        - **十六进制掩码**：`FF.FF.FF.00`
-    - **主机部分大小**：C 类地址的主机部分占 **8 位**（32 位减去 24 位的网络部分）。
+            - 去掉网络地址和广播地址，剩余可分配给主机的地址数为 65,534 个。
+3. C 类网络 (Class C)
+    - 地址范围：`192.0.0.0` 到 `223.255.255.255`
+        - 二进制表示：`11000000.00000000.00000000.00000000` 到 `11011111.11111111.11111111.11111111`
+        - 十六进制表示：`C0.00.00.00` 到 `DF.FF.FF.FF`
+    - 默认子网掩码：`255.255.255.0` 或 `/24`
+        - 二进制掩码：`11111111.11111111.11111111.00000000`
+        - 十六进制掩码：`FF.FF.FF.00`
+    - 主机部分大小：C 类地址的主机部分占 8 位（32 位减去 24 位的网络部分）。
         - 可分配的主机地址数：
-            
             ```
             2^8 - 2 = 254
-            
             ```
-            
-            - 去掉网络地址和广播地址，剩余可分配给主机的地址数为 **254** 个。
+            - 去掉网络地址和广播地址，剩余可分配给主机的地址数为 254 个。
 
-other things to know / take note of
+### other things to know / take note of
 - important ppl
     - A.M Turing
     - John Von Neumann
@@ -330,8 +321,6 @@ other things to know / take note of
 - “True” = non-zero integer
 - email related: POP/SMT
 - IPv6 & IPv4:
-    
-    
     | Feature | IPv4 | IPv6 |
     | --- | --- | --- |
     | Address Size | 32 bits (~4.3 billion) | 128 bits (~340 undecillion) |
@@ -341,7 +330,7 @@ other things to know / take note of
     | Broadcast | Supported | Replaced with multicast |
     | Addressing | NAT required | No NAT needed |
 - picture encoding
-    - 以颜色编码为基础，将二维平面 **(**空间**)**离散化为网格点(像素 Pixel)，记录每个网格点上的一个代表性颜色值
+    - 以颜色编码为基础，将二维平面 (空间)离散化为网格点(像素 Pixel)，记录每个网格点上的一个代表性颜色值
     - 分辨率：网格点的数目，如1024x768
     - Space (Bytes)=Width (pixels)×Height (pixels)×Bits per Pixel (bpp)
         - 1MB=1,048,576Bytes (binary MB) or 1MB=1,000,000Bytes (decimal MB).
